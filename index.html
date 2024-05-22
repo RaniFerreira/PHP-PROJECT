@@ -10,25 +10,71 @@
 
     <div class="container">
         <header class="row clearfix">
-            Logomarca
+            <img src="bootstrap/img/logomarca.png" alt="logomarca"/>
         </header>
 
         <nav class="row clearfix">
-            Menu
+            <ul>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="listas.html">Listas</a>
+                </li>
+                <li>
+                    <a href="produtos.html">Produtos</a>
+                </li>
+            </ul>
         </nav>
 
         <div class="row clearfix">
             <section class="col-md-6">
-                Região do login
+                <form method="post">
+                    <hr>
+                    <h2>
+                        <strong>Efetue o login</strong>
+                    </h2>
+                    <hr>
+                    <p><input type="email" name="email" placeholder="Digite seu email" required></p>
+                    <p><input type="password" name="senha" placeholder="digite sua senha" required></p>
+                    <label class="checkbox">
+                        <input type="checkbox" name="lembrete" > Lembrar senha
+                    </label>
+                    <p><button name="login" type="submit">Entrar</button></p>
+                </form>
             </section>
 
-            <section>
-                Região de cadastro
+            <section class="col-md-6">
+                <form method="post">
+                    <hr>
+                    <h2>
+                        <strong>Cadastre-se agora</strong>
+                    </h2>
+                    <hr>
+                    <p><input type="email" name="email" placeholder="Digite seu email" required></p>
+                    <p><input type="password" name="senha" placeholder="digite sua senha" required></p>
+                    <p><button name="login" type="submit">Cadastrar</button></p>
+                </form>
             </section>
 
         </div>
         <section class="row clearfix">
-            Região de minitutorial
+            <hr>
+            <h2>
+                <strong>Como criar sua própria lista</strong>
+            </h2>
+            <hr>
+
+            <div >
+                <div>
+                    <img src="bootstrap/img/index/tutorial_1.jpg" alt="tutorial">
+                </div>
+                <div >
+                    <p>
+                        Texto explicativo
+                    </p>
+                </div>
+            </div>
         </section>
 
 </div>
