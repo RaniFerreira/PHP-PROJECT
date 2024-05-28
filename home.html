@@ -44,17 +44,63 @@
         </section>
 
         <section class="col-md-6">
-            Região de dados cadastrais/exclusão de listas
+            <h4>Daados do perfil</h4>
+            <p>Nome: Usuário</p>
+            <p>email: usuario@gmail.com</p>
+            <p><a href="#">Meu link</a></p>
+            <p>Data de criação: 12/12/2012</p>
+            <br>
+
+            <div>
+                <h3>Minha Lista</h3>
+
+                <p>Nome: Lista de aniversário</p>
+                <form method="post">
+                    <input type="text" name="descricao" placeholder="coloque aqui o nome da sua lista" required/>
+                    <button name="criarLista" type="submit">Criar lista</button> 
+                </form>
+            </div>
         </section>
     </div>
 
     <div class="row clearfix">
+        <hr>
+        <h3>Itens da minha lista</h3>
+        <hr>
         <section class="col-md-6">
-            Região de produtos da lista
+           
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Discrição</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>6</td>
+                        <td>Computador</td>
+                        <td>
+                            <form method="post">
+                                <input type="hidden" name="codProduto" value="6">
+                                <button name="excluirItem" type="submit">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <section class="col-md-6">
-            Região de indicação para amigos
+            <h3>Indicar para um amigo</h3>
+            <form method="post">
+                <input type="hidden" name="link" value="">
+                <p><input type="text" name="nome" placeholder="Nome" required></p>
+                <p><input type="email" name="email" placeholder="email" required></p>
+                <p><button type="submit">Indicar</button></p>
+            </form>
         </section>
     </div>
 </body>

@@ -9,7 +9,15 @@
 <body>
     
     <header class="row clearfix">
+        <div class="col-md-8">
         <img src="bootstrap/img/logomarca.png" alt="logomarca"/>
+        </div>
+        <div class="col-md-4">
+            <form method="get">
+                <input type="text" name="search_nome" placeholder="Nome do usuário" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
     </header>
 
     <nav>
@@ -27,12 +35,39 @@
     </nav>
 
     <div class="row clearfix">
+        <hr>
+        <h2>
+            <strong>Listinha de presente</strong>
+        </h2>
+        <hr>
     <section class="col-md-6">
-        Perfil do usuário
+        
+        <h4>Perfil</h4>
+        <img src="bootstrap/img/usuario/padrao.jpg" alt="">
+        <p>Nome: </p>
+        <p>Email: </p>
+        <p><a href="">Link</a></p>
+        <p>Data de criação: </p>
     </section>
 
     <section class="col-md-6">
-        Lista do usuário
+        <h4>Itens da lista</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>detalhes</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Computador</td>
+                    <td><a href="">Ver</a></td>
+                </tr>
+             </tbody>
+        </table>
     </section>
 
 </body>
