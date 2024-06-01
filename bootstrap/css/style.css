@@ -5,6 +5,11 @@ body {
     -moz-background-size: cover; /* Para navegadores Firefox */
     -o-background-size: cover; /* Para navegadores Opera */
 }
+.logo{
+    margin-left: -130px;
+    margin-right: -150px;
+    
+}
 
 .caixa{
     background-color: rgba(225, 225, 225, 0.8);
@@ -14,11 +19,29 @@ body {
     border-radius: 3px;
 }
 
+.menu-estilo li a{
+    text-decoration: none;  
+    margin-right: 20px;
+}
 .menu-estilo{
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-weight: 400;
-    margin: 0 auto;
-    display: table;
     font-size: 1.25em;
+    width: 410px;
+    margin: 0 auto;
+   
+}
+
+.form-estilo{
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.titulo{
+    text-align: center;
+    text-transform:uppercase;
+    letter-spacing: 1px;
+    font-size: 1.25em;
+    font-weight: 400;
 }

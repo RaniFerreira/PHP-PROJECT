@@ -11,7 +11,7 @@
 
     <div class="container">
         <header class="row clearfix">
-            <h1>Sys<img src="bootstrap/img/logomarca.png" alt="logomarca"/>Cad</h1>
+            <h1>Sys<img class="logo" src="bootstrap/img/logomarca.png" alt="logomarca"/>Cad</h1>
         </header>
 
         <nav class="row clearfix caixa">
@@ -28,54 +28,54 @@
             </ul>
         </nav>
 
-        <div class="row clearfix">
+        <div class="row clearfix caixa">
             <section class="col-md-6">
-                <form method="post">
+                <form method="post" class="form-estilo">
                     <hr>
-                    <h2>
+                    <h2 class="titulo">
                         <strong>Efetue o login</strong>
                     </h2>
                     <hr>
-                    <p><input type="email" name="email" placeholder="Digite seu email" required></p>
-                    <p><input type="password" name="senha" placeholder="digite sua senha" required></p>
+                    <p><input type="email" name="email" class="form-control" placeholder="Digite seu email" required></p>
+                    <p><input type="password" name="senha" class="form-control" placeholder="digite sua senha" required></p>
                     <label class="checkbox">
                         <input type="checkbox" name="lembrete" > Lembrar senha
                     </label>
-                    <p><button name="login" type="submit">Entrar</button></p>
+                    <p><button name="login" class="btn btn-lg btn-info btn-block" type="submit">Entrar</button></p>
                 </form>
             </section>
 
             <section class="col-md-6">
-                <form method="post">
+                <form method="post" class="form-estilo">
                     <hr>
-                    <h2>
+                    <h2  class="titulo">
                         <strong>Cadastre-se agora</strong>
                     </h2>
                     <hr>
-                    <p><input type="email" name="email" placeholder="Digite seu email" required></p>
-                    <p><input type="password" name="senha" placeholder="digite sua senha" required></p>
-                    <p><button name="login" type="submit">Cadastrar</button></p>
+                    <p><input type="email" name="email" class="form-control" placeholder="Digite seu email" required></p>
+                    <p><input type="password" name="senha" class="form-control" placeholder="digite sua senha" required></p>
+                    <p><button name="login" c class="btn btn-lg btn-info btn-block" type="submit">Cadastrar</button></p>
                 </form>
             </section>
 
         </div>
-        <section class="row clearfix">
+        <section class="row clearfix caixa">
             <hr>
-            <h2>
-                <strong>Como criar sua própria lista</strong>
+            <h2 class="titulo">
+                <strong>Como criar sua própria lista?</strong>
             </h2>
             <hr>
 
-            <div >
-                <div>
-                    <img src="bootstrap/img/index/tutorial_1.jpg" alt="tutorial">
-                </div>
-                <div >
-                    <p>
-                        Texto explicativo
-                    </p>
-                </div>
+            <div class="col-md-6">
+                
+                <img class="img-responsive" src="bootstrap/img/index/tutorial_1.jpg" alt="tutorial">
             </div>
+            <div class="col-md-6">
+                <p>
+                    Texto explicativo
+                </p>
+            </div>
+        
         </section>
 
 </div>
