@@ -45,3 +45,11 @@ body {
     font-size: 1.25em;
     font-weight: 400;
 }
+
+.centralizado{
+    text-align: center;
+}
+.img-responsive{
+    width: 200px;
+    margin: auto;
+}

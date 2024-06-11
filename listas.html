@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de listas</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/style.css">
 </head>
 <body>
     
     <header class="row clearfix">
         <div class="col-md-8">
-        <img src="bootstrap/img/logomarca.png" alt="logomarca"/>
+            <h1>Sys<img class="logo" src="bootstrap/img/logomarca.png" alt="logomarca"/>Cad</h1>
         </div>
-        <div class="col-md-4">
-            <form method="get">
+        <div class="col-md-4" style="margin-top: 25px;">
+            <form method="get" class="form-inline text-right">
                 <input type="text" name="search_nome" placeholder="Nome do usuário" required>
-                <button type="submit">Buscar</button>
+                <button class="btn btn-sucess" type="submit">Buscar</button>
             </form>
         </div>
     </header>
 
-    <nav>
-        <ul>
+    <nav class="row clearfix caixa">
+        <ul class="nav nav-pills menu-estilo">
             <li>
                 <a href="index.html">Início</a>
             </li>
@@ -34,25 +35,27 @@
         </ul>
     </nav>
 
-    <div class="row clearfix">
+    <div class="row clearfix caixa">
         <hr>
-        <h2>
+        <h2 class="titulo">
             <strong>Listinha de presente</strong>
         </h2>
         <hr>
-    <section class="col-md-6">
+    <section class="col-md-6 centralizado">
         
         <h4>Perfil</h4>
-        <img src="bootstrap/img/usuario/padrao.jpg" alt="">
+        <img class="img-responsive center-block" src="bootstrap/img/usuario/padrao.jpg" alt="">
         <p>Nome: </p>
         <p>Email: </p>
-        <p><a href="">Link</a></p>
+        <p><a href="#">
+            <span class="glyphicon glyphicon-link"></span>
+            Link</a></p>
         <p>Data de criação: </p>
     </section>
 
     <section class="col-md-6">
-        <h4>Itens da lista</h4>
-        <table>
+        <h4 class="titulo">Itens da lista</h4>
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Código</th>
@@ -64,7 +67,10 @@
                 <tr>
                     <td>3</td>
                     <td>Computador</td>
-                    <td><a href="">Ver</a></td>
+                    <td><a href="" class="btn btn-info">
+                        <span class="glyphicon glyphicon-gift"></span>
+                        Ver
+                    </a></td>
                 </tr>
              </tbody>
         </table>

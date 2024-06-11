@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de perfil</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/style.css">
 </head>
 <body>
     
     <header class="row clearfix">
-        
-        <img src="bootstrap/img/logomarca.png" alt="logomarca"/>
+        <h1>Sys<img class="logo" src="bootstrap/img/logomarca.png" alt="logomarca"/>Cad</h1>
     </header>
 
-    <nav class="row clearfix">
-        <ul>
+    <nav class="row clearfix caixa">
+        <ul class="nav nav-pills menu-estilo">
             <li>
                 <a href="index.html">Início</a>
             </li>
@@ -27,7 +27,7 @@
         </ul>
     </nav>
 
-    <div class="row clearfix">
+    <div class="row clearfix caixa">
 
         <hr>
         <h2>
@@ -36,16 +36,16 @@
         <hr>
         <section class="col-md-6">
            <h4>Imagem de perfil</h4>
-           <img src="bootstrap/img/usuario/padrao.jpg" alt="">
+           <img class="img-responsive center-block" src="bootstrap/img/usuario/padrao.jpg" alt="">
            <hr>
-           <form method="post" enctype="multipart/form-data">
-            <p><input type="file" name="arquivo"></p>
-            <p><button name="enviarFoto" type="submit">Enviar</button></p>
+           <form class="form-estilo" method="post" enctype="multipart/form-data">
+            <p><input class="form-control" type="file" name="arquivo"></p>
+            <p><button class="btn btn-lg btn-info btn-block" name="enviarFoto" type="submit">Enviar</button></p>
            </form>
         </section>
 
         <section class="col-md-6">
-            <h4>Daados do perfil</h4>
+            <h4 class="titulo">Dados do perfil</h4>
             <p>Nome: Usuário</p>
             <p>email: usuario@gmail.com</p>
             <p><a href="#">Meu link</a></p>
@@ -58,7 +58,9 @@
                 <p>Nome: Lista de aniversário</p>
                 <form method="post">
                     <input type="text" name="descricao" placeholder="coloque aqui o nome da sua lista" required/>
-                    <button name="criarLista" type="submit">Criar lista</button> 
+                    <button name="excluirLista" class="btn btn-danger" type="submit">
+                        <span class="glyphicon glyphicon-remove">Excluir</span>
+                    </button> 
                 </form>
             </div>
         </section>
@@ -66,11 +68,11 @@
 
     <div class="row clearfix">
         <hr>
-        <h3>Itens da minha lista</h3>
+        <h3 class="titulo">Itens da minha lista</h3>
         <hr>
-        <section class="col-md-6">
+        <section class="col-md-6" style="background-color: #fff;">
            
-            <table>
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Código</th>
@@ -86,7 +88,9 @@
                         <td>
                             <form method="post">
                                 <input type="hidden" name="codProduto" value="6">
-                                <button name="excluirItem" type="submit">Excluir</button>
+                                <button name="excluirItem" type="submit" class="btn btn-danger">
+                                   <span class="glyphicon glyphicon-remove">Excluir</span> 
+                                </button>
                             </form>
                         </td>
                     </tr>
@@ -94,13 +98,13 @@
             </table>
         </section>
 
-        <section class="col-md-6">
-            <h3>Indicar para um amigo</h3>
-            <form method="post">
+        <section class="col-md-6 caixa">
+            <h3 class="titulo">Indicar para um amigo</h3>
+            <form class="form-estilo" method="post">
                 <input type="hidden" name="link" value="">
-                <p><input type="text" name="nome" placeholder="Nome" required></p>
-                <p><input type="email" name="email" placeholder="email" required></p>
-                <p><button type="submit">Indicar</button></p>
+                <p><input type="text" class="form-control" name="nome" placeholder="Nome" required></p>
+                <p><input type="email" class="form-control" name="email" placeholder="email" required></p>
+                <p><button class="btn btn-lg btn-info btn-block" type="submit">Indicar</button></p>
             </form>
         </section>
     </div>
