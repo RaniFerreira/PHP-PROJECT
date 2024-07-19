@@ -24,6 +24,24 @@
                 }
             }
         }
+
+        public function validarUsuario($email, $senha){
+
+            try{
+                $sql = "SELECT * FROM usuario WHERE email=? AND senha=?";
+                $stmt = Conexao::getConexao()->prepare($sql);
+                $stmt -> bindValue(1,$email);
+                $stmt -> bindValue(2,$senha);
+                $stmt -> execute();
+                $result = $stmt->rowCount();
+
+                return $result;
+            }catch (PDOException $ex){
+                return false;
+            }
+        }
     }
+
+
 
 ?>

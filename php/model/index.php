@@ -8,8 +8,12 @@
 <body>
     <?php
         include './conexao.php';
+        include './usuario.php';
 
-        var_dump(Conexao::getConexao());
+        $u = new Usuario();
+        echo $u->validarUsuario('ass@a.com','a');
+
+       
     ?>
 </body>
 </html>
