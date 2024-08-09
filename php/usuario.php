@@ -40,7 +40,31 @@
                 return false;
             }
         }
+
+        public function recebeUsuario($email) {
+            try {
+                $sql = "SELECT * FROM usuario WHERE email = ?";
+                $stmt = Conexao::getConexao()->prepare($sql);
+                $stmt->bindValue(1, $email, PDO::PARAM_STR); // associa o valor ao primeiro placeholder
+        
+                $stmt->execute();
+        
+                if ($stmt->rowCount() > 0) {
+                    $result = $stmt->fetch(PDO::FETCH_BOTH);
+                    return $result;
+                }
+                return false;
+            } catch (PDOException $ex) {
+                // Aqui você pode registrar o erro para fins de depuração
+                error_log("Erro ao buscar usuário: " . $ex->getMessage());
+                return false;
+            }
+        }
+        
     }
+
+   
+
 
 
 

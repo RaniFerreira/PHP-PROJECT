@@ -11,8 +11,7 @@
         include './usuario.php';
 
         $u = new Usuario();
-        echo $u->validarUsuario('ass@a.com','a');
-
+        print_r($u->recebeUsuario('a@a.com'));
        
     ?>
 </body>
