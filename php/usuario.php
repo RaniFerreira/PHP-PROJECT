@@ -60,6 +60,42 @@
                 return false;
             }
         }
+
+        public function recebeUsuarioPorCampo($campo, $valor) {
+            try {
+                $sql = "SELECT * FROM usuario WHERE $campo like  '%$valor'";
+                $stmt = Conexao::getConexao()->prepare($sql);
+        
+                $stmt->execute();
+        
+                if ($stmt->rowCount() > 0) {
+                    $result = $stmt->fetchAll(PDO::FETCH_BOTH);
+                    return $result;
+                }
+                return false;
+            } catch (PDOException $ex) {
+                return false;
+            }
+        }
+
+        public function recebeUsuarios() {
+            try {
+                $sql = "SELECT * FROM usuario";
+                $stmt = Conexao::getConexao()->prepare($sql);
+        
+                $stmt->execute();
+        
+                if ($stmt->rowCount() > 0) {
+                    $result = $stmt->fetch(PDO::FETCH_BOTH);
+                    return $result;
+                }
+                return false;
+            } catch (PDOException $ex) {
+                // Aqui você pode registrar o erro para fins de depuração
+                error_log("Erro ao buscar usuário: " . $ex->getMessage());
+                return false;
+            }
+        }
         
     }
 

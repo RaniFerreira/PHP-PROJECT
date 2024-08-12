@@ -8,10 +8,10 @@
 <body>
     <?php
         include './conexao.php';
-        include './usuario.php';
+        include './lista.php';
 
-        $u = new Usuario();
-        print_r($u->recebeUsuario('a@a.com'));
+        $g = new Lista();
+        print_r($g->getLista('teste@teste.com'));
        
     ?>
 </body>
