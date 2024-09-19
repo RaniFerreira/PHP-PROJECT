@@ -41,7 +41,7 @@
             }
         }
 
-        public function getLista ($email){
+        public function getLista($email){
 
             try{
                 $sql = "SELECT * FROM lista WHERE usuario= ?";
@@ -60,6 +60,31 @@
             }
             catch (PDOException $ex){
                 return false;
+            }
+        }
+
+        public function addItem($email, $produto){
+            try{
+                $lista = $this->getLista($email);
+                if(!$lista){
+                    return 'Lista não encontrada';
+                }
+
+                $sql = "INSERT INTO item VALUES (?,?";
+                $stmt = Conexao::getConexao()->prepare($sql);
+                $stmt ->bindValue(1, $lista['codigo']);
+                $stmt ->bindValue(2, $produto);
+                $stmt -> execute();
+
+                return 'produto adicionado á lista';
+                
+            }
+            catch(PDOException $ex){
+                if($ex->errorInfo[1] == 1062){
+                    return 'produto já adicionado á lista';
+                }else{
+                    return 'Produto não adicionado';
+                }
             }
         }
     }

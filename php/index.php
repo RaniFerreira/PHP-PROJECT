@@ -11,7 +11,7 @@
         include './lista.php';
 
         $g = new Lista();
-        print_r($g->getLista('teste@teste.com'));
+        print_r($g->addItem('a@a.com',1));
        
     ?>
 </body>
